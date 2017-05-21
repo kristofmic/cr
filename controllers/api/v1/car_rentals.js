@@ -20,6 +20,7 @@ function getCars(req, res) {
   };
 
   orbitz.getCarRentals(pickUpCriteria, dropOffCriteria)
+    .then(data => JSON.parse(data))
     .then(responseHelper.handleSuccess(res))
     .catch(responseHelper.handleError(res));
 }
