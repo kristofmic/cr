@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/_head', { css: [clientCssBundle], title: 'Car Rentals' })%>
+
+    <!-- Third Party Javascript
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </head>
+  <body>
+    <%- include ./partials/_entry %>
+
+    <%- include('./partials/_scripts', { js: [vendorJsBundle, clientJsBundle] }) %>
+
+    <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+</html>
