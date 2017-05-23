@@ -19,10 +19,9 @@ function getCars(req, res) {
     search: req.query.dropOffSearch
   };
 
-  orbitz.getCarRentals(pickUpCriteria, dropOffCriteria)
-    .then(data => JSON.parse(data))
-    .then(responseHelper.handleSuccess(res))
-    .catch(responseHelper.handleError(res));
+  orbitz
+    .getCarRentals(pickUpCriteria, dropOffCriteria)
+    .pipe(res);
 }
 
 export default router;
